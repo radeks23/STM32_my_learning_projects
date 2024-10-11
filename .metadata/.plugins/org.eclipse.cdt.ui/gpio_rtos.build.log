@@ -1,0 +1,8 @@
+16:31:08 **** Incremental Build of configuration Debug for project gpio_rtos ****
+make -j16 all 
+Error: Cannot find the specified linker script. Check the linker settings in the build configuration.
+make: *** [makefile:91: fail-specified-linker-script-missing] Error 2
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+16:31:08 Build Failed. 2 errors, 0 warnings. (took 508ms)
+

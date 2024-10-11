@@ -1,0 +1,10 @@
+10:53:00 **** Incremental Build of configuration Debug for project crossroad_traffic_light_stm ****
+make -j16 all 
+arm-none-eabi-size  crossroad_traffic_light_stm.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10192	     12	   1708	  11912	   2e88	crossroad_traffic_light_stm.elf
+Finished building: default.size.stdout
+ 
+
+10:53:01 Build Finished. 0 errors, 0 warnings. (took 386ms)
+

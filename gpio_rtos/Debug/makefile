@@ -64,8 +64,8 @@ all: main-build
 main-build: gpio_rtos.elf secondary-outputs
 
 # Tool invocations
-gpio_rtos.elf gpio_rtos.map: $(OBJS) $(USER_OBJS) C:\Users\radek\STM32CubeIDE\workspace_1.16.1\gpio_rtos\STM32F303RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "gpio_rtos.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\radek\STM32CubeIDE\workspace_1.16.1\gpio_rtos\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="gpio_rtos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+gpio_rtos.elf gpio_rtos.map: $(OBJS) $(USER_OBJS) fail-specified-linker-script-missing makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "gpio_rtos.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 --specs=nosys.specs -Wl,-Map="gpio_rtos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
